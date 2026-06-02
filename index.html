@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empaque Gomez | Cosechando lo mejor de la tierra</title>
+    <meta name="description" content="Llevamos la frescura del campo directamente a tu negocio. Proveedores agrícolas para la alta cocina y hotelería en Baja California.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="assets/img/logo-empaque-gomez.png" alt="Logotipo Empaque Gomez">
+            </div>
+            <!-- Botón de Menú Móvil -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                </ul>
+            </nav>
+            <a href="#contacto" class="btn btn-primary">Escríbenos</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN PRINCIPAL (HERO) -->
+        <section id="inicio" class="hero">
+            <!-- Video Autoreproducible de Fondo -->
+            <video class="hero-video" autoplay muted playsinline>
+                <source src="assets/img/hero-bg.mp4" type="video/mp4">
+            </video>
+            
+            <!-- Capa de oscurecimiento (Overlay) -->
+            <div class="hero-overlay"></div>
+            
+            <div class="container hero-content">
+                <h1>Llevamos la frescura del campo directamente a tu negocio</h1>
+                <p>Cosechando lo mejor de la tierra para la alta cocina y hotelería.</p>
+                <a href="#productos" class="btn btn-secondary">Ver Catálogo</a>
+            </div>
+        </section>
+
+        <!-- SOBRE NOSOTROS -->
+        <section id="nosotros" class="about">
+            <div class="container">
+                <h2>Nuestra Pasión por lo Natural</h2>
+                <p class="section-subtitle">Conectamos el esfuerzo del campo agrícola con las mesas más exigentes, eliminando intermediarios para garantizar calidad y frescura absoluta.</p>
+
+                <!-- Cuadrícula de Valores -->
+                <div class="values-grid">
+                    
+                    <!-- Tarjeta 1 -->
+                    <div class="value-item" onclick="abrirModal('modal-sustentable')">
+                        <div class="video-trigger">
+                            <video class="value-video" autoplay loop muted playsinline>
+                                <source src="assets/img/val-sustentable.mp4" type="video/mp4">
+                            </video>
+                            <div class="click-hint">Ver más ➕</div>
+                        </div>
+                        <h3>Cultivo Sustentable</h3>
+                        <p>Prácticas agrícolas responsables que cuidan la tierra.</p>
+                    </div>
+                    
+                    <!-- Tarjeta 2 -->
+                    <div class="value-item" onclick="abrirModal('modal-sanidad')">
+                        <div class="video-trigger">
+                            <video class="value-video" autoplay loop muted playsinline>
+                                <source src="assets/img/val-sanidad.mp4" type="video/mp4">
+                            </video>
+                            <div class="click-hint">Ver más ➕</div>
+                        </div>
+                        <h3>Sanidad Garantizada</h3>
+                        <p>Estrictos controles de higiene e inocuidad.</p>
+                    </div>
+                    
+                    <!-- Tarjeta 3 -->
+                    <div class="value-item" onclick="abrirModal('modal-comercio')">
+                        <div class="video-trigger">
+                            <video class="value-video" autoplay loop muted playsinline>
+                                <source src="assets/img/val-comercio.mp4" type="video/mp4">
+                            </video>
+                            <div class="click-hint">Ver más ➕</div>
+                        </div>
+                        <h3>Comercio Justo</h3>
+                        <p>Cadena de valor humana, digna y equitativa.</p>
+                    </div>
+                    
+                </div>
+
+                <!-- Insignias de Certificaciones / Promesas -->
+                <div class="certifications">
+                    <h3>Nuestros Estándares de Operación</h3>
+                    <div class="cert-logos">
+                        <div class="cert-badge">Calidad Premium</div>
+                        <div class="cert-badge">Inocuidad Agrícola</div>
+                        <div class="cert-badge">Cadena de Frío</div>
+                        <div class="cert-badge">Empaque Seguro</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO DE PRODUCTOS -->
+        <section id="productos" class="products">
+            <div class="container">
+                <h2>Nuestra Cosecha</h2>
+                <p class="section-subtitle">Selección premium para la alta gastronomía.</p>
+                
+                <div class="product-grid">
+                    <!-- Ficha de Producto 1 -->
+                    <article class="product-card">
+                        <img src="assets/img/zanahorias-especialidad.webp" alt="Zanahorias de Especialidad Orgánicas Empaque Gomez">
+                        <div class="product-info">
+                            <span class="badge badge-orange">Top Ventas</span>
+                            <h3>Zanahorias de Especialidad</h3>
+                            <div class="tech-specs">
+                                <p><strong>Estacionalidad:</strong> Todo el año</p>
+                                <p><strong>Calibre:</strong> Baby y Estándar</p>
+                                <p><strong>Empaque:</strong> Caja de 10 kg</p>
+                            </div>
+                            <a href="#contacto" class="btn btn-outline">Consultar Disponibilidad</a>
+                        </div>
+                    </article>
+
+                    <!-- Ficha de Producto 2 -->
+                    <article class="product-card">
+                        <img src="assets/img/remolacha-gourmet.webp" alt="Remolacha Gourmet">
+                        <div class="product-info">
+                            <span class="badge badge-purple">Temporada</span>
+                            <h3>Remolacha Sangre de Toro</h3>
+                            <div class="tech-specs">
+                                <p><strong>Estacionalidad:</strong> Invierno - Primavera</p>
+                                <p><strong>Calibre:</strong> Mediano a Grande</p>
+                                <p><strong>Empaque:</strong> Costal de 15 kg</p>
+                            </div>
+                            <a href="#contacto" class="btn btn-outline">Consultar Disponibilidad</a>
+                        </div>
+                    </article>
+
+                    <!-- Ficha de Producto 3 -->
+                    <article class="product-card">
+                        <img src="assets/img/raizapio-gourmet.webp" alt="Raíz de Apio Gourmet">
+                        <div class="product-info">
+                            <span class="badge badge-green">100% Orgánico</span>
+                            <h3>Raíz de Apio</h3>
+                            <div class="tech-specs">
+                                <p><strong>Estacionalidad:</strong> Otoño - Invierno</p>
+                                <p><strong>Calibre:</strong> Premium Uniforme</p>
+                                <p><strong>Empaque:</strong> Caja de 12 kg</p>
+                            </div>
+                            <a href="#contacto" class="btn btn-outline">Consultar Disponibilidad</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRUEBA SOCIAL / CONFIANZA -->
+        <section class="trust">
+            <div class="container">
+                <h2>Confían en Nosotros</h2>
+                <p class="section-subtitle">Respaldados por los mejores restaurantes y hoteles de Baja California.</p>
+                
+                <!-- Logos de Clientes (Placeholders elegantes) -->
+                <div class="clients-logos">
+                    <div class="logo-placeholder">Hotel Riviera</div>
+                    <div class="logo-placeholder">Grupo Gastronómico</div>
+                    <div class="logo-placeholder">Resort & Spa</div>
+                    <div class="logo-placeholder">Bistró del Valle</div>
+                </div>
+
+                <!-- Testimonios de Clientes -->
+                <div class="testimonials-grid">
+                    <!-- Testimonio 1 -->
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"La puntualidad en la entrega y la calidad de las hortalizas han elevado el nivel de nuestros platillos. Empaque Gomez es un socio comercial invaluable para nuestra cocina."</p>
+                        <div class="client-info">
+                            <strong>Chef Alejandro T.</strong>
+                            <span>Restaurante Alta Cocina</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 2 -->
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"En la hotelería de alto nivel no podemos permitirnos retrasos ni mermas. Desde que trabajamos con ellos, la frescura y la sanidad alimentaria están garantizadas día a día."</p>
+                        <div class="client-info">
+                            <strong>María Fernanda R.</strong>
+                            <span>Gerente de Alimentos y Bebidas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    
+                    <!-- Columna Izquierda: Información de Confianza -->
+                    <div class="contact-info">
+                        <h2>Trabajemos Juntos</h2>
+                        <p>Asegura la calidad, sanidad y puntualidad que tu cocina necesita. Nuestro equipo está listo para abastecer tus pedidos por volumen.</p>
+                        
+                        <div class="info-details">
+                            <p><strong>📍 Ubicación:</strong> <a href="https://maps.app.goo.gl/Wuhnkhsu7fAUBxmu7" target="_blank" rel="noopener noreferrer" class="map-link">Ensenada, Baja California, México</a></p>
+                            <p><strong>📞 Teléfono Ventas:</strong> +52 (646) 123 4567</p>
+                            <p><strong>✉️ Correo Corporativo:</strong> ventas@empaquegomez.com</p>
+                            <p><strong>🕒 Horario de Atención:</strong> Lunes a Sábado, 6:00 AM - 4:00 PM</p>
+                        </div>
+                        
+                        <!-- Botón Directo a WhatsApp -->
+                        <a href="https://wa.me/526461234567" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                            Cotizar por WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Columna Derecha: Formulario de Captación -->
+                    <div class="contact-form-container">
+                        <form action="#" method="POST" class="contact-form">
+                            
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Ej. Chef Juan Pérez">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="empresa">Empresa / Restaurante / Hotel *</label>
+                                <input type="text" id="empresa" name="empresa" required placeholder="Nombre de tu negocio">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="correo">Correo Electrónico *</label>
+                                    <input type="email" id="correo" name="correo" required placeholder="tu@correo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono / Celular *</label>
+                                    <input type="tel" id="telefono" name="telefono" required placeholder="A 10 dígitos">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensaje">¿Qué productos y volumen te interesan? *</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntanos un poco sobre tus necesidades de abastecimiento..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">Solicitar Información</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ================= VENTANAS MODALES ================= -->
+        
+        <!-- Modal Sustentable -->
+        <div id="modal-sustentable" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="cerrarModal('modal-sustentable')">&times;</span>
+                <!-- Video largo (15 seg) con controles -->
+                <video class="modal-video" controls preload="none">
+                    <source src="assets/img/full-sustentable.mp4" type="video/mp4">
+                </video>
+                <div class="modal-text">
+                    <h3>Nuestro Compromiso con la Tierra</h3>
+                    <p>Ensenada nos da lo mejor de sus suelos, y nosotros se lo devolvemos con prácticas agrícolas responsables. Minimizamos el impacto ambiental para garantizar un ecosistema saludable para las futuras cosechas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Sanidad -->
+        <div id="modal-sanidad" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="cerrarModal('modal-sanidad')">&times;</span>
+                <video class="modal-video" controls preload="none">
+                    <source src="assets/img/full-sanidad.mp4" type="video/mp4">
+                </video>
+                <div class="modal-text">
+                    <h3>Inocuidad Total en el Campo</h3>
+                    <p>La inocuidad es el pilar de nuestra operación. Mantenemos controles absolutos en nuestras operaciones de campo en Baja California, alineándonos con los estrictos parámetros de auditoría PrimusGFS. Desde la recolección hasta tu cocina, la seguridad alimentaria es innegociable.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Comercio Justo -->
+        <div id="modal-comercio" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="cerrarModal('modal-comercio')">&times;</span>
+                <video class="modal-video" controls preload="none">
+                    <source src="assets/img/full-comercio.mp4" type="video/mp4">
+                </video>
+                <div class="modal-text">
+                    <h3>Valor Humano</h3>
+                    <p>Empaque Gomez es una familia extendida. Trabajar sin intermediarios nos permite asegurar un pago digno y directo a quienes trabajan la tierra con sus propias manos, elevando la calidad de vida de nuestra comunidad.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-legal">
+                <p>&copy; 2026 Empaque Gomez. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="privacidad.html">Política de Privacidad</a> | 
+                    <a href="terminos.html">Términos y Condiciones</a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <!-- Puedes cambiar el # por los enlaces reales de tus redes -->
+                <a href="#" target="_blank" rel="noopener">Instagram</a>
+                <a href="#" target="_blank" rel="noopener">Facebook</a>
+                <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
