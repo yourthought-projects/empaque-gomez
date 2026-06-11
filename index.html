@@ -220,20 +220,22 @@
                         
                         <div class="info-details">
                             <p><strong>📍 Ubicación:</strong> <a href="https://maps.app.goo.gl/Wuhnkhsu7fAUBxmu7" target="_blank" rel="noopener noreferrer" class="map-link">Ensenada, Baja California, México</a></p>
-                            <p><strong>📞 Teléfono Ventas:</strong> +52 (646) 123 4567</p>
-                            <p><strong>✉️ Correo Corporativo:</strong> ventas@empaquegomez.com</p>
+                            <p><strong>📞 Teléfono Ventas:</strong> +52 (646) 154 9650</p>
+                            <p><strong>✉️ Correo Corporativo:</strong> ventas.empaquegomez@gmail.com</p>
                             <p><strong>🕒 Horario de Atención:</strong> Lunes a Sábado, 6:00 AM - 4:00 PM</p>
                         </div>
                         
                         <!-- Botón Directo a WhatsApp -->
-                        <a href="https://wa.me/526461234567" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                        <a href="https://wa.me/526461549650" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
                             Cotizar por WhatsApp
                         </a>
                     </div>
 
                     <!-- Columna Derecha: Formulario de Captación -->
                     <div class="contact-form-container">
-                        <form action="#" method="POST" class="contact-form">
+                        <form id="contactForm" action="https://formspree.io/f/xaqzdbak" method="POST" class="contact-form">
+                            
+                            <input type="text" name="_gotcha" style="display:none">
                             
                             <div class="form-group">
                                 <label for="nombre">Nombre Completo *</label>
@@ -261,7 +263,8 @@
                                 <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntanos un poco sobre tus necesidades de abastecimiento..."></textarea>
                             </div>
                             
-                            <button type="submit" class="btn btn-primary btn-block">Solicitar Información</button>
+                            <button type="submit" id="submitButton" class="btn btn-primary btn-block">Solicitar Información</button>
+                            <p id="statusMessage" style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: #666;"></p>
                         </form>
                     </div>
 
@@ -334,5 +337,52 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+
+    <script>
+        var form = document.getElementById("contactForm");
+        
+        async function handleSubmit(event) {
+            event.preventDefault(); // Detiene el envío normal y evita que la página recargue
+            var button = document.getElementById("submitButton");
+            var status = document.getElementById("statusMessage");
+            var data = new FormData(event.target);
+
+            // Feedback visual: Avisa al usuario que está procesando
+            button.innerText = "Enviando Solicitud...";
+            button.disabled = true;
+            button.style.opacity = "0.7"; // Efecto visual de deshabilitado
+            status.innerHTML = ""; // Limpia mensajes anteriores
+
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // REDIRECCIÓN DIRECTA: Cambiamos a la página de gracias de forma limpia
+                    window.location.href = "gracias.html"; 
+                } else {
+                    status.innerHTML = "Hubo un error al enviar tu solicitud. Por favor, intenta de nuevo.";
+                    status.style.color = "red";
+                    button.innerText = "Solicitar Información";
+                    button.disabled = false;
+                    button.style.opacity = "1";
+                }
+            }).catch(error => {
+                status.innerHTML = "Error de conexión. Verifica tu internet y vuelve a intentarlo.";
+                status.style.color = "red";
+                button.innerText = "Solicitar Información";
+                button.disabled = false;
+                button.style.opacity = "1";
+            });
+        }
+        
+        // Si el formulario existe, le añade el evento
+        if(form) {
+            form.addEventListener("submit", handleSubmit);
+        }
+    </script>
 </body>
 </html>
