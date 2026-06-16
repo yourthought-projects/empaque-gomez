@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Premium | Empaque Gomez</title>
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <!-- Archivo CSS Principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Estilos específicos adaptados a la paleta corporativa */
+        .catalog-hero {
+            text-align: center;
+            padding: var(--spacing-xl) var(--spacing-md);
+            background-color: var(--color-bg-light); /* Beige orgánico */
+            border-bottom: 4px solid var(--color-action); /* Línea Verde Campo */
+        }
+
+        .catalog-hero h1 {
+            color: var(--color-primary); /* Azul Marino */
+            font-size: 2.5rem;
+        }
+
+        .catalog-hero p {
+            color: #555;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg) auto;
+        }
+
+        .catalog-container { 
+            max-width: var(--max-width); 
+            margin: 0 auto; 
+            padding: var(--spacing-xl) var(--spacing-md); 
+        }
+
+        .category-title { 
+            color: var(--color-primary); 
+            border-bottom: 2px solid var(--color-accent-1); /* Subrayado Morado Remolacha */
+            padding-bottom: 10px; 
+            margin-top: var(--spacing-xl); 
+        }
+
+        .product-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+            gap: var(--spacing-lg); 
+            margin-top: var(--spacing-md); 
+        }
+
+        /* Tarjeta de producto adaptada */
+        .product-card { 
+            background: var(--color-bg-white); 
+            border: 1px solid #eaeaea; 
+            border-radius: 8px; 
+            padding: 15px; 
+            text-align: center; 
+            box-shadow: 0 4px 10px rgba(0, 45, 90, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 45, 90, 0.1);
+            border-color: var(--color-action);
+        }
+
+        .product-img { 
+            width: 100%; 
+            height: 180px; 
+            object-fit: cover; 
+            border-radius: 6px; 
+            background-color: #f4f4f4; 
+            margin-bottom: 15px; 
+        }
+
+        .product-name { 
+            font-family: var(--font-heading);
+            color: var(--color-primary);
+            font-weight: 600; 
+            font-size: 1.2rem; 
+            margin-bottom: 5px; 
+        }
+
+        .product-details { 
+            font-family: var(--font-body);
+            font-size: 0.9rem; 
+            color: #666; 
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA CORPORATIVA -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logo-empaque-gomez.png" alt="Logotipo Empaque Gomez" style="height: 50px;">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">← Volver al Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ENCABEZADO DEL CATÁLOGO -->
+    <section class="catalog-hero">
+        <h1>Cosecha Exclusiva Empaque Gomez</h1>
+        <p>Explora nuestra selección premium de temporada cultivada hombro a hombro con nuestra comunidad.</p>
+        
+        <!-- BOTÓN DE DESCARGA PDF -->
+        <a href="assets/docs/Catalogo_Empaque_Gomez.pdf" download="Catalogo_Premium_Empaque_Gomez.pdf" class="btn btn-primary">
+            ⬇ Descargar Catálogo en PDF
+        </a>
+    </section>
+
+    <!-- CUADRÍCULA DE PRODUCTOS -->
+    <main class="catalog-container">
+
+        <!-- Categoría: Zanahorias -->
+        <h2 class="category-title">Zanahorias</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/img/zanahoria_reg.webp" alt="Zanahoria Regular" class="product-img">
+                <div class="product-name">Zanahoria Regular</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Zanahoria Amarilla" class="product-img">
+                <div class="product-name">Zanahoria Amarilla</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/zanahoria_mod.webp" alt="Zanahoria Morada" class="product-img">
+                <div class="product-name">Zanahoria Morada</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/zanahoria_red.webp" alt="Zanahoria Roja" class="product-img">
+                <div class="product-name">Zanahoria Roja</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Zanahoria Arcoiris" class="product-img">
+                <div class="product-name">Zanahoria Arcoiris (Mixta)</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+        </div>
+
+        <!-- Categoría: Betabeles -->
+        <h2 class="category-title">Betabeles Baby</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Betabel Candy" class="product-img">
+                <div class="product-name">Betabel Candy</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Betabel Rojo" class="product-img">
+                <div class="product-name">Betabel Rojo</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Betabel Dorado" class="product-img">
+                <div class="product-name">Betabel Dorado</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+        </div>
+
+        <!-- Categoría: Rábanos -->
+        <h2 class="category-title">Rábanos</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Watermelon" class="product-img">
+                <div class="product-name">Rábano Sandía</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Black Radish" class="product-img">
+                <div class="product-name">Rábano Negro</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Daikon Morado" class="product-img">
+                <div class="product-name">Daikon Morado</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Raíz de Apio" class="product-img">
+                <div class="product-name">Raíz de Apio</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Chirivía" class="product-img">
+                <div class="product-name">Chirivía (Parnisp)</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+        </div>
+
+        <!-- Categoría: Calabazas -->
+        <h2 class="category-title">Calabazas</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="C. Estrella Amarilla" class="product-img">
+                <div class="product-name">C. Estrella Amarilla</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Por temporada</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="C. Estrella Verde" class="product-img">
+                <div class="product-name">C. Estrella Verde</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Por temporada</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="C. Zuchini" class="product-img">
+                <div class="product-name">C. Zuchini</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Por temporada</div>
+            </div>
+        </div>
+
+        <!-- Categoría: Tomates y Brocolin -->
+        <h2 class="category-title">Tomates y Brocolin</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Tomate Heirloon" class="product-img">
+                <div class="product-name">Tomate Heirloon</div>
+                <div class="product-details">Presentación: Caja<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Heirloon Baby" class="product-img">
+                <div class="product-name">Heirloon Baby</div>
+                <div class="product-details">Presentación: Domos<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Brocolin" class="product-img">
+                <div class="product-name">Brocolin</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+        </div>
+
+        <!-- Categoría: Pepino y Chiles -->
+        <h2 class="category-title">Pepino y Chiles</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Pepino Persa" class="product-img">
+                <div class="product-name">Pepino Persa</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Chile Shishito" class="product-img">
+                <div class="product-name">Chile Shishito</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Por temporada</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="Chile Fresno" class="product-img">
+                <div class="product-name">Chile Fresno</div>
+                <div class="product-details">Presentación: 510 GR<br>Disponibilidad: Por temporada</div>
+            </div>
+        </div>
+
+        <!-- Categoría: Hongos -->
+        <h2 class="category-title">Hongos</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="H. Bunapi Blanco" class="product-img">
+                <div class="product-name">H. Bunapi Blanco</div>
+                <div class="product-details">Presentación: Domos<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="H. Bunapi Café" class="product-img">
+                <div class="product-name">H. Bunapi Café</div>
+                <div class="product-details">Presentación: Domos<br>Disponibilidad: Todo el año</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/placeholder.jpg" alt="H. Maitake" class="product-img">
+                <div class="product-name">H. Maitake</div>
+                <div class="product-details">Presentación: Domos<br>Disponibilidad: Todo el año</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA CORPORATIVO -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-legal">
+                <p>&copy; 2026 Empaque Gomez. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="privacidad.html">Política de Privacidad</a> | 
+                    <a href="terminos.html">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
